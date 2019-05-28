@@ -1,2 +1,4 @@
-django
+django==2
 requests
+django-crispy-forms
+pillow

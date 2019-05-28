@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'portal',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -121,3 +122,20 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+API_KEY_2FA = "c9ef2a2e-806a-11e9-ade6-0200cd936042"
+
+AUTH_USER_MODEL = 'portal.User'
+
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+
+)
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+from django.urls import reverse_lazy
+
+LOGIN_URL = reverse_lazy('portal:login')
+LOGIN_REDIRECT_URL = reverse_lazy('portal:home')

@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import HashUserToken
+from .models import OtpSession
 
-admin.site.register(HashUserToken)
+admin.site.register(OtpSession)
 
 # Register your models here.
